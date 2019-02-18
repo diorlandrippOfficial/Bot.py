@@ -1,0 +1,16 @@
+import discord
+from discord.ext import commands
+
+TOKEN='TOKEN'
+bot = commands.Bot(command_prefix='prefix'))
+
+@bot.event
+async def on_ready():
+print('Ready!')
+await bot.change_presence(game=discord.Game(name='Game', type=1))
+
+@bot.command()
+async def command():
+ await bot.say('Hey!')
+ 
+ bot.run(TOKEN)
